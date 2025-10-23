@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Rouge+Script&display=swap');
+
+canvas {
+    background-color: transparent;
+  }
+
+.wedding-message-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+  
+  .wedding-message {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Great Vibes", cursive; /* Elegant cursive font */
+    color: #ff69b4;
+    background-color: transparent;
+    padding: 12px;
+    animation: fadeInOut 8s forwards; /* Longer duration */
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .wedding-message span {
+    opacity: 0;
+    animation: typing 0.8s forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: scale(0.8); }
+    10% { opacity: 1; transform: scale(1); }
+    90% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.8); }
+  }
+  
+  @keyframes typing {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes write {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
