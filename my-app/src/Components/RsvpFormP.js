@@ -45,9 +45,9 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
         <br/>
         <h3>Dear {GuestName}, </h3>
         <br/> 
-        {formSubmitStatus && <h4>Thank you for submitting your response, you can always come back to make any changes to response anytime before February 15, 2026.</h4>}
-        {!formSubmitStatus && RsvpStatus && <h4>You've already submitted a response but if there are any changes you would like to make, you can submit another one before February 15, 2026.</h4>}
-        {!formSubmitStatus && !RsvpStatus && <h4>Please RSVP below. We kindly ask you to complete the form by February 15, 2026. </h4>}
+        {formSubmitStatus && <h4>Thank you for submitting your response, you can always come back to make any changes to response anytime before January 31, 2026.</h4>}
+        {!formSubmitStatus && RsvpStatus && <h4>You've already submitted a response but if there are any changes you would like to make, you can submit another one before January 31, 2026.</h4>}
+        {!formSubmitStatus && !RsvpStatus && <h4>Please RSVP below. We kindly ask you to complete the form by January 31, 2026. </h4>}
         {submitErrorMessage && <p style={{color: "red"}}>Failed to Submit Your Response. Please Try Again Later.</p>}
         <br/>
         { !formSubmitStatus && 
