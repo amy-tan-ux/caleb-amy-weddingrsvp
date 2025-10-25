@@ -7,6 +7,7 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
     const [formSubmitStatus, setFormSubmitStatus] = useState(false);
     const [submitErrorMessage, setSubmitErrorMessage] = useState(false);
     const [freezeForm, setFreezeForm] = useState(false);
+    const [showDuck, setShowDuck] = useState(false);
 
     useEffect(() => {
       if (FormValues){
@@ -36,12 +37,17 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
 
     return (
     <div className="form-container">
-        <h1>RSVP</h1><br/>
-        <h3>Hi {GuestName}, </h3>
+         {showDuck && <img
+            src="https://media.tenor.com/yRSnf6wABQ4AAAAi/pato-duck.gif"
+            alt="Duck Overlay"
+            className="overlay-image"></img>}
+        <h1>RSVP</h1>
+        <br/>
+        <h3>Dear {GuestName}, </h3>
         <br/> 
-        {formSubmitStatus && <h5>Thank you for submitting your RSVP, you can always come back to make any changes to response anytime before February 15, 2026.</h5>}
-        {!formSubmitStatus && RsvpStatus && <h5>You've already made an RSVP but if there are any changes you wish to make in your previous response, you can submit another response below before February 15, 2026!</h5>}
-        {!formSubmitStatus && !RsvpStatus && <h5>Please RSVP below. Due to logistics and planning we kindly ask you to complete the RSVP before February 15, 2026. </h5>}
+        {formSubmitStatus && <h4>Thank you for submitting your response, you can always come back to make any changes to response anytime before February 15, 2026.</h4>}
+        {!formSubmitStatus && RsvpStatus && <h4>You've already submitted a response but if there are any changes you would like to make, you can submit another one before February 15, 2026.</h4>}
+        {!formSubmitStatus && !RsvpStatus && <h4>Please RSVP below. We kindly ask you to complete the form by February 15, 2026. </h4>}
         {submitErrorMessage && <p style={{color: "red"}}>Failed to Submit Your Response. Please Try Again Later.</p>}
         <br/>
         { !formSubmitStatus && 
@@ -51,7 +57,7 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
             {/* Dynamic generation of form fields and input depending on 
             input type, fieldname,label, classname, placeholder, description, value*/}
 
-            {!(field["label"]=="Email") && <h5>{field["label"]}</h5>}
+            {!(field["label"]=="Email") && <h4>{field["label"]}</h4>}
             <p>{field["description"]}</p>
             {!field["value"] && <> <label key= {field["value"]}><input type={field["type"]} name={field["fieldname"]} placeholder={field["placeholder"]} className={field["classname"]} 
                      onChange={(e) => {
@@ -67,6 +73,10 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
                             value={option}
                             checked={( !formInput[field["fieldname"]]  && field["placeholder"]===option) | ( formInput[field["fieldname"]]  && formInput[field["fieldname"]] === option) }
                             onChange={(e) => {
+                              if(option.includes("duck")){
+                                setShowDuck(true);
+                                setTimeout(() => setShowDuck(false), 3000); // show duck for three second
+                              }
                                setFormInput( prevFormInput =>({ ...prevFormInput, [field["fieldname"]]: option}));
                             }}
                             readOnly= {freezeForm}
