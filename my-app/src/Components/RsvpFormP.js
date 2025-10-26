@@ -45,7 +45,7 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
         <br/>
         <h3>Dear {GuestName}, </h3>
         <br/> 
-        {formSubmitStatus && <h4>Thank you for submitting your response, you can always come back to make any changes to response anytime before January 31, 2026.</h4>}
+        {formSubmitStatus && <h4>Thank you for submitting your response, you can always reload the page to make any changes to response anytime before January 31, 2026.</h4>}
         {!formSubmitStatus && RsvpStatus && <h4>You've already submitted a response but if there are any changes you would like to make, you can submit another one before January 31, 2026.</h4>}
         {!formSubmitStatus && !RsvpStatus && <h4>Please RSVP below. We kindly ask you to complete the form by January 31, 2026. </h4>}
         {submitErrorMessage && <p style={{color: "red"}}>Failed to Submit Your Response. Please Try Again Later.</p>}
@@ -57,7 +57,7 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
             {/* Dynamic generation of form fields and input depending on 
             input type, fieldname,label, classname, placeholder, description, value*/}
 
-            {!(field["label"]=="Email") && <h4>{field["label"]}</h4>}
+            {!(field["label"]==="Email") && <h4>{field["label"]}</h4>}
             <p>{field["description"]}</p>
             {!field["value"] && <> <label key= {field["value"]}><input type={field["type"]} name={field["fieldname"]} placeholder={field["placeholder"]} className={field["classname"]} 
                      onChange={(e) => {

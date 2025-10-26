@@ -2,7 +2,7 @@ import {useEffect, useRef, useState } from "react";
 import "./style/AnimatedMessages.css";
 
 const PADDING = 50; // Ensures messages stay within bounds
-const MAX_LINE_WIDTH = 250; 
+const MAX_LINE_WIDTH = 600; 
 const LINE_HEIGHT = 40; 
 
 const DynamicSVGMessages = ({messagesList = []}) => {
@@ -94,22 +94,27 @@ const DynamicSVGMessages = ({messagesList = []}) => {
         return selectedMessages;
       };
   
-      const findSafeSpot = () => {
+      const findSafeSpot1 = () => {
         let x, y;
-        let attempts = 0;
       
-        do {
-          x = Math.random() * (canvasSize.width - PADDING * 2) + PADDING;
-          y = Math.random() * (canvasSize.height - PADDING * 2) + PADDING;
-          attempts++;
-        } while (
-          activeMessages.some(
-            (msg) =>
-              Math.abs(msg.x - x) < MAX_LINE_WIDTH + 2 &&  // Ensuring proper horizontal spacing
-              Math.abs(msg.y - y) < LINE_HEIGHT * 3.2  // Ensuring vertical spacing
-          ) && attempts < 20 // Increase max attempts to find a safer position
-        );
+        x = 0.5 * (canvasSize.width - PADDING * 2) + PADDING;
+        y = 0.167 * (canvasSize.height - PADDING * 2) + PADDING;
+        return { x, y };
+      };
+
+      const findSafeSpot2 = () => {
+        let x, y;
       
+        x = 0.5 * (canvasSize.width - PADDING * 2) + PADDING;
+        y = 0.5 * (canvasSize.height - PADDING * 2) + 2* PADDING;
+        return { x, y };
+      };
+
+      const findSafeSpot3 = () => {
+        let x, y;
+      
+        x = 0.5 * (canvasSize.width - PADDING * 2) + PADDING;
+        y = 0.833 * (canvasSize.height - PADDING * 2) + 3 * PADDING;
         return { x, y };
       };
       
@@ -122,7 +127,7 @@ const DynamicSVGMessages = ({messagesList = []}) => {
             const newMessages = getUniqueMessages(messagesList, prev.map(msg => msg.text));
             return newMessages.map((text, index) => ({
               text,
-              ...findSafeSpot(),
+              ...findSafeSpot2(),
               opacity: 1
             }));
           });
@@ -130,9 +135,9 @@ const DynamicSVGMessages = ({messagesList = []}) => {
         if (activeMessages.length < 3) {
           const [newMessage1, newMessage2, newMessage3] = getUniqueMessages(messagesList);
           setActiveMessages([
-            { text: newMessage1, ...findSafeSpot(), opacity: 1 },
-            { text: newMessage2, ...findSafeSpot(), opacity: 1 },
-            { text: newMessage3, ...findSafeSpot(), opacity: 1 },
+            { text: newMessage1, ...findSafeSpot1(), opacity: 1 },
+            { text: newMessage2, ...findSafeSpot2(), opacity: 1 },
+            { text: newMessage3, ...findSafeSpot3(), opacity: 1 },
           ]);
         }
       };

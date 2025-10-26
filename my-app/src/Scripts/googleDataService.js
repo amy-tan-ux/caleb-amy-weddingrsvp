@@ -19,7 +19,7 @@ export const callGoogleScriptsService = async (httptype, guestCode, action, payl
     console.log(guestDetailsUrl);
     const urlExtension = `?guestCode=${guestCode}&actions=${action}`;
     debugger
-    if (httptype == "POST"){
+    if (httptype === "POST"){
             try {
                 let googleScriptResponse;
                 let responseData;
@@ -45,7 +45,7 @@ export const callGoogleScriptsService = async (httptype, guestCode, action, payl
                 return { "status": "Error"};
             }
         }
-    else if (httptype == "GET"){
+    else if (httptype === "GET"){
             try {
                 let googleScriptResponse;
                 let responseData;

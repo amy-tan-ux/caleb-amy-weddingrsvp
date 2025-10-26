@@ -26,7 +26,7 @@ const SongRequestsMessages = ({userCode = "open", userName = "anonymous", pastSu
     const saveSongRequests = async (e) => {
           e.preventDefault();
           try {
-            if (!songRequest| songRequest == "Fail00" | songRequest == "Success00"){
+            if (!songRequest| songRequest === "Fail00" | songRequest === "Success00"){
               return;
             }
             setFreezeSongInput(true);
@@ -49,7 +49,7 @@ const SongRequestsMessages = ({userCode = "open", userName = "anonymous", pastSu
     const saveMessages = async (e) => {
           e.preventDefault();
           try {
-            if (!messageToCouple| messageToCouple == "Fail00" | messageToCouple == "Success00"){
+            if (!messageToCouple| messageToCouple === "Fail00" | messageToCouple === "Success00"){
               return;
             }
             setFreezeMessageInput(true);
