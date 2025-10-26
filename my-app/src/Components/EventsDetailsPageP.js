@@ -5,7 +5,7 @@ const EventsDetailsPagePrivate = ({title, schedule, location, note, locationlink
         <div className="wedding-container">
           <h1 className="rose-gold-title">{title}</h1>
           <p className="story-text">
-          {schedule} at <a href={locationlink}> {location}</a>
+          {schedule} at {location}
           </p>
           <p className="story-text">
             {note}

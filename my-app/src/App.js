@@ -184,7 +184,7 @@ function App() {
           <>
           <RsvpFormP FormValues={authorizedFormComponents} GuestName={guestName} RsvpStatus={rsvpStatus} GuestCode={guestCode}/>
           {relatedGuest.GuestName && <> <br/> <br/> <br/>  
-            <a href={`${window.location.origin}/?guestCode=${relatedGuest.GuestCode}`} target="_blank" rel="noopener noreferrer">
+            <a href={`${window.location.origin}/caleb-amy-weddingrsvp/?guestCode=${relatedGuest.GuestCode}`} target="_blank" rel="noopener noreferrer">
             RSVP for {relatedGuest.GuestName}
             </a></>}
           {/* Guest Code Details View */}
