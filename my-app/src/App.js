@@ -19,7 +19,7 @@ function App() {
   const [showOnlineContent, setShowOnlineContent] = useState(false);
   const [authenticationStatus, setAuthenticationStatus] = useState(false); // unauthorized view
   const [rsvpStatus, setRsvpStatus] = useState(false);
-  const [guestCode, setGuestCode] = useState("Please Enter Your Guest Code");
+  const [guestCode, setGuestCode] = useState("Please Enter Your Guest Code To RSVP");
   const [guestName, setGuestName] = useState("");
 
   // Form Components Avalible to User to Access
@@ -59,7 +59,7 @@ function App() {
         } else if (response.status === 'Unauthorized'){
                 setAuthenticationStatus(false);
                 console.log(`Guest Code ${guestCode} is unauthorized to access content`); 
-                setGuestCode("Check Your Site URL or Guest Code and Try Again.");
+                setGuestCode("Enter Your Guest Code or Check Your Site URL");
         } else {
           console.error('Failed to load authorization details:', response);
           setAuthenticationStatus(false);
@@ -151,20 +151,20 @@ function App() {
 
   return (
 
-    <div className="parallax">
-
-      {/* No Guest Code View */}
-      {showOnlineContent && (<SongRequestsMessages userCode={guestCode} userName={guestName} pastSuggestedSong={musicRequestList} messageToCouples={coupleMessagesList} />)}
-      <div className="container">
-      <div className="profile-container">
-      </div>
-        {!onlineStatus && (<ServerError></ServerError>)}
-        <div className={`${isInitLoading ? 'fly-in' : ''}`} >
-          <div className="circle-image"></div>
-          <h1 className="wedding-title">Caleb & Amy</h1>
-          <p className="subtext">Join us for our special day!</p>
-        </div>
-
+    <div>
+       {authenticationStatus && (<navigationBar class="navbar">
+        <a href="#details">Wedding Details</a>
+        <a href="#rsvp">RSVP Details</a>
+        <a href="#story">Our Love Story</a>
+      </navigationBar>)}
+      {!onlineStatus && (<ServerError></ServerError>)}
+      {/* Initial Loading View */}
+        <div className={`hero ${isInitLoading ? 'fly-in' : ''}`} >
+          <div className='hero-content '>
+            <div className='invite-hero2'>You Are Invited</div>
+            <div className="invite-hero1">to celebrate the wedding of</div>
+            <div className='invite-hero4'>Caleb & Amy</div>
+            <div className="invite-hero1">Thank you for being part of <br/>our Story!</div>
         {!isInitLoading && !authenticationStatus && (<form onSubmit={getRSVPDetails}>
           <input
             type="text"
@@ -174,38 +174,38 @@ function App() {
             required
             className="input-box"
           />
-          <br />
-          <button type="submit" className="btn">RSVP</button>
         </form>
       )}
-
+      </div>
+      </div>
+      <div>
+        {/* No Guest Code View */}
+        { !isInitLoading &&
+        (
+        <>
+        <EventsDetailsPage></EventsDetailsPage>
         {/* Guest Code Form View */}
         {authenticationStatus && (
           <>
-          <RsvpFormP FormValues={authorizedFormComponents} GuestName={guestName} RsvpStatus={rsvpStatus} GuestCode={guestCode}/>
-          {relatedGuest.GuestName && <> <br/> <br/> <br/>  
-            <a href={`${window.location.origin}/caleb-amy-weddingrsvp/?guestCode=${relatedGuest.GuestCode}`} target="_blank" rel="noopener noreferrer">
-            RSVP for {relatedGuest.GuestName}
-            </a></>}
           {/* Guest Code Details View */}
+          <div className='section-header' id="details">Event Schedule & Details</div>
           {authorizedDetails.map((content) => (
             <EventsDetailsPagePrivate title={content["title"]} 
                   location={content["location"]} 
                   schedule={content["schedule"]}
                   note={content["note"]} 
                   locationlink={content["locationlink"]}  />))}
+                  <br/><br/><br/><br/><br/>
+                  </>)}
+      
+      {showOnlineContent && (<SongRequestsMessages userCode={guestCode} userName={guestName} pastSuggestedSong={musicRequestList} messageToCouples={coupleMessagesList} />)}   
+         
+         {authenticationStatus && (
+          <>
+          {/* RSVP Form */}
+          <RsvpFormP FormValues={authorizedFormComponents} GuestName={guestName} RsvpStatus={rsvpStatus} GuestCode={guestCode} RelatedGuestCode={relatedGuest.GuestCode} RelatedGuestName={relatedGuest.GuestName}/>
           </>)}
-
-        {/* No Guest Code View */}
-        { !isInitLoading &&
-        (
-        <>
-        <EventsDetailsPage></EventsDetailsPage>
         <OurLoveStory></OurLoveStory>
-        <footer>
-          Caleb & Amy 2025 <br/>
-          Wedding RSVP Website
-        </footer>
         </>
         )}
       </div>

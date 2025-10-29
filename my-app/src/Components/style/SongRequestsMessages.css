@@ -57,7 +57,7 @@
   
   .icon {
     font-size: 24px;
-    color: #b76e79;
+    color: var(--main-light-blue);
   }
 
   /* Close Button (X Icon) */
@@ -81,13 +81,6 @@
     position: relative;
   }
   
-  .input-box-side {
-    flex: 1;
-    padding: 10px;
-    padding-right: 40px;
-    width: 70%;
-  }
-  
   .icon-btn {
     position: absolute;
     right: 10px;
@@ -95,10 +88,10 @@
     border: none;
     cursor: pointer;
     font-size: 1.2em;
-    color:#b76e79;
+    color:var(--main-light-blue);
   }
   .icon-btn:hover {
-    color: #4a9689;
+    color: var(--main-dark-red);
   }
   .success-message {
     color: green;
