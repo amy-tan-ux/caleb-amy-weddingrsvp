@@ -74,8 +74,8 @@ const SongRequestsMessages = ({userCode = "open", userName = "anonymous", pastSu
       <div className="music-message-section" id="music-message">
         <div>
           <br/> <br/> 
-          {userName && <>You can leave us a message or request a song here! We really appreciate all messages and song suggestions you are about to share. </>}
-          <br/> <br/> 
+          You can leave us a message or request a song here! We really appreciate all messages and song suggestions you are about to share.
+          <br/><br/>
           <form>
           {( !userName || userName==="anonymous" || userName==="Please Enter Your Guest Code") && <>We kindly ask you to share your name so we know who you are!<br/> <br/>
           <input type="text" placeholder="Enter Your Name" className="input-box-side"  onChange={(e) => setGuestName(e.target.value)}/> <br />
