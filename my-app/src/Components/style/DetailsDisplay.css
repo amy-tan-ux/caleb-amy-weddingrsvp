@@ -2,25 +2,26 @@
 /* Elegant rose gold theme */
 .wedding-container {
     text-align: center;
-    padding: 30px;
-    font-family: 'Playfair Display', serif;
-  }
+    padding: 2vh 15% 2vh 15%;
+}
   
   .rose-gold-title {
-    font-size: 36px;
-    color: #b76e79; /* Rose gold shade */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: max(1.3vw, 12px);
+    color: var(--main-light-blue);
   }
   
   .story-text {
-    font-size: 18px;
-    margin: 20px auto;
-    max-width: 600px;
-    line-height: 1.8;
-    color: #5a5a5a; /* Soft neutral tone */
-    font-style: italic;
+    font-family: "Annie Use Your Telescope", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: max(1.5vw, 15px);
+    color: var(--main-dark-grey);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
   }
   
 
@@ -38,9 +39,28 @@
     border-radius: 12px;
     box-shadow: 0px 6px 12px rgba(183, 110, 121, 0.4);
   }
+
+  iframe{
+    width: 65%;
+    height: 50vh;
+    border: none;
+  } 
+
+  .form-container {
+  justify-content: center;
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 400;
+  font-style: normal;
+  
+}
+
   
   /* ✅ Adjust image sizes based on screen width */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .image-gallery {
       flex-direction: column; /* ✅ Stack images vertically on small screens */
       align-items: center;
@@ -49,10 +69,18 @@
     .wedding-photo {
       max-width: 80%; /* ✅ Make images bigger for mobile screens */
     }
+
+    iframe{
+    width: 55vw;
+    height: 30vh;
+    border: none;
+  } 
+    .form-container {
+      width: 65%;
+  }
+  .wedding-container {
+    padding: 2vh 4vw 2vh 4vw;
+}
+
   }
   
-  @media (max-width: 480px) {
-    .wedding-photo {
-      max-width: 100%; /* ✅ Full width on very small screens */
-    }
-  }

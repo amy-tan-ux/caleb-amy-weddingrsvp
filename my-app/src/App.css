@@ -1,12 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Annie+Use+Your+Telescope&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Chonburi&family=Cookie&family=Emblema+One&family=Emilys+Candy&family=Gravitas+One&family=Inspiration&family=Limelight&family=Lobster&family=Markazi+Text:wght@400..700&family=Meow+Script&family=Notable&family=Petit+Formal+Script&family=Protest+Guerrilla&family=Reenie+Beanie&family=Rock+Salt&family=Rouge+Script&family=Rozha+One&family=Unna:ital,wght@0,400;0,700;1,400;1,700&family=Updock&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+:root {
+  --main-dark-grey: #292327;
+  --main-light-grey: #98A6A4;
+  --main-dark-blue: #01091E;
+  --main-light-blue: #4376B8;
+  --main-dark-red: #771C3A;
+  --main-light-red: #C44560;
+  --main-blue-white: rgb(212, 220, 255);
+  --main-cream-white: #ECECEC;
+}
+
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif; /* Elegant wedding font */
   text-align: center;
+  background-color: var(--main-cream-white);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+.left-container{
+      width: 50%;
+      height: auto;
+    display: relative;
+    justify-content: center;
+    margin: 0 0 0 0;
+    float: left;
+
+}
+
+.right-container{
+      width: 50%;
+      height: auto;
+    display: relative;
+    justify-content: center;
+    margin: 0 0 0 0;
+    float: right;
+
+}
+
+.section-header{
+    padding-top: 12vh;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: max(4vw, 48px);
+    color: var(--main-dark-blue);
+}
+.navbar {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: max(2vw, 18px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Aligns items to the left */
+  gap: 6rem;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--main-dark-grey);
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--main-dark-red);
+}
+
+.icon-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-top: 1px solid #eee;
+}
+
+.icon-link img,
+.icon-form button img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.icon-link:hover img,
+.icon-form button:hover img {
+  transform: scale(1.1);
+}
+
+.icon-form button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .parallax {
-  background-image: url("../public/White-Flower-Background.jpg"); /* Replace with your own image */
   height: auto;
   min-height: 100vh;
   background-attachment: fixed;
@@ -16,6 +115,86 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Hero section */
+.hero {
+  height: 100vh;
+  background-image: url('../public/AmyCalebHeroW2.png'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero input{
+  display: block;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  width: 90%;
+}
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  max-width: 100%;
+  padding-right: 10vw;
+  padding-top: max(15vw, 220px);
+}
+
+.hero-content h1{
+  color: var(--main-dark-grey);
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-style: bold;
+  font-size: max(3vw, 28px);
+  color: var(--main-dark-blue);
+}
+
+.invite-hero1{
+  padding: 0.5vw;
+  font-family: "Annie Use Your Telescope", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: max(2vw, 15px);
+  color: var(--main-dark-grey);
+}
+
+.invite-hero2{
+  padding: 0.5vw;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background: linear-gradient(80deg, var(--main-dark-blue), var(--main-light-grey), var(--main-light-blue), var(--main-blue-white), var(--main-dark-blue), var(--main-light-blue), var(--main-dark-blue));
+                -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: max(5.6vw, 40px);
+}
+
+.invite-hero3{
+  padding: 0.5vw;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: max(4vw, 34px);
+  background: linear-gradient(20deg, var(--main-dark-blue), var(--main-light-blue), var(--main-dark-blue));
+                -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.invite-hero4{
+  padding: 0.5vw;
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: max(2vw, 20px);
+  color: var(--main-light-blue);
 }
 
 .container {
@@ -47,9 +226,17 @@ body, html {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+.input-box-side{
+  padding: 10px;
+  width: 30%;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 .btn {
-  background-color: #b76e79; /* Rose gold */
+  background-color: var(--main-dark-blue); /* Rose gold */
   color: white;
   padding: 12px 24px;
   border: none;
@@ -58,47 +245,112 @@ body, html {
   font-size: 1.1em;
 }
 
-.form-container {
-  margin-top: 20px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.circle-image {
-  width: 150px; /* Couple's Photo*/
-  height: 150px;
-  border-radius: 50%; /* Makes it circular */
-  background-image: url("../public/8247dc8d-f147-43ec-a0f5-41ddcd34d19b.jpg"); /* Add your image */
-  background-size: cover; /* Ensures the image covers the space */
-  background-position: center; /* Centers the image */
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
 footer{
-  color: #b76e79;
-  padding-top: 3vw;
-  padding-top: 5vw;
-
+  padding-top: 15vw;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--main-dark-blue)
 }
 
-.overlay-image {
-  position: fixed; /* or absolute */
-  top: 0;
-  left: 0;
-  width: auto;
-  height: 70vh;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent */
+.music-message-section{
+  background-image: url('../public/floral_background.png');
+    background-size: cover;
+    background-position: center;
+    padding-top: 5vh;
+    justify-content: center;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: max(3.5vh, 18px);
+    background-color: var(--main-cream-white);
+    height: 80vh;
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--main-light-blue);
+    box-shadow: var(--main-dark-grey);
+}
+loveStorySec-1{
+    justify-content: center;
+    background-image: url('../public/LoveStory1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 130vh;
+    width: 100%;
+    display: flex;
+}
+loveStorySec-2{
+  width: 100%;
+  height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* justify-content: center;
-  align-items: center; */
-  z-index: 9999;
+  background-color: var(--main-dark-blue);
 }
+loveStorySec-3{
+    background-image: url('../public/LoveStory5.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+    width: 100%;
+    display: flex;
+}
+loveStorySec-4{
+    background-image: url('../public/LoveStory6.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+gallery-photo-1{
+    display: block;
+    background-image: url('../public/LoveStory2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+    width: 100%;
+    display: flex;
+
+}
+couple-quote{
+  padding: 5%;
+  display: block;
+  width: 90%;
+  height: 51vh;
+  background-color: var(--main-dark-blue);
+  color: var(--main-cream-white);
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: max(1.4vw, 16px);
+}
+gallery-photo-2{
+    display: block;
+    background-image: url('../public/LoveStory3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    width: 100%;
+}
+gallery-photo-3{
+    display: block;
+    background-image: url('../public/LoveStory4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    width: 100%;
+
+}
+
+
+couple-quote a {
+  color: var(--main-light-red);
+}
+
 
 @keyframes flyIn {
   from {
@@ -113,4 +365,79 @@ footer{
 
 .fly-in {
   animation: flyIn 4.5s ease-out forwards;
+}
+
+@media screen and (max-width: 760px) {
+  /* Hero section */
+.hero {
+  background-image: url('../public/AmyCalebHero.jpg'); 
+  align-items: center;
+  justify-content: center;
+}
+.hero-content {
+  margin-top: 22vw;
+  padding: 0vw 0vw 0vw 0vw;
+  width: 100%; height: auto;
+  background: rgba(66, 64, 64, 0.582); 
+}
+
+.invite-hero1{
+  color: var(--main-cream-white);
+  text-shadow:#000000;
+}
+
+.invite-hero2{
+  padding: 4px;
+  color: var(--main-cream-white);
+  text-shadow: #000000;
+}
+
+.invite-hero3{
+  background: linear-gradient(to right, var(--main-cream-white), var(--main-cream-white), var(--main-blue-white), var(--main-light-blue), var(--main-cream-white));
+                -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: #000000;
+}
+
+.invite-hero4{
+  color: var(--main-cream-white);
+  text-shadow: #000000;
+}
+.hero input{
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.hero input::placeholder {
+  color: var(--main-dark-red);
+}
+
+.optional{
+    display: none;
+  }
+
+.left-container{
+    width: 100%;
+    display: block;
+    float: none;
+
+}
+
+.right-container{
+    width: 100%;
+    display: block;
+  }
+
+footer{
+ padding-top: 30vh;
+}
+  
+}
+
+
+@media screen and  (max-width: 560px) {
+  .navbar {
+    display: none;
+  }
 }

@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import {postGuestRSVPDetails} from '../Scripts/googleDataInterface';
-import '../App.css';
+import '../Components/style/DetailsDisplay.css';
 
-const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
+const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode, RelatedGuestName, RelatedGuestCode}) =>{
     const [formInput, setFormInput] = useState({});
     const [formSubmitStatus, setFormSubmitStatus] = useState(false);
     const [submitErrorMessage, setSubmitErrorMessage] = useState(false);
@@ -36,15 +36,16 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
     }
 
     return (
-    <div className="form-container">
-         {showDuck && <img
-            src="https://media.tenor.com/yRSnf6wABQ4AAAAi/pato-duck.gif"
-            alt="Duck Overlay"
-            className="overlay-image"></img>}
-        <h1>RSVP</h1>
+    <div className="form-container" id="rsvp">
+         
+        <div className='section-header'>RSVP Details & Form</div>
         <br/>
+        {RelatedGuestName && <>  
+            <a href={`${window.location.origin}/caleb-amy-weddingrsvp/?guestCode=${RelatedGuestCode}`} target="_blank" rel="noopener noreferrer">
+            RSVP for {RelatedGuestName}
+            </a></>}
+        <br/><br/>
         <h3>Dear {GuestName}, </h3>
-        <br/> 
         {formSubmitStatus && <h4>Thank you for submitting your response, you can always reload the page to make any changes to response anytime before January 31, 2026.</h4>}
         {!formSubmitStatus && RsvpStatus && <h4>You've already submitted a response but if there are any changes you would like to make, you can submit another one before January 31, 2026.</h4>}
         {!formSubmitStatus && !RsvpStatus && <h4>Please RSVP below. We kindly ask you to complete the form by January 31, 2026. </h4>}
@@ -52,6 +53,11 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
         <br/>
         { !formSubmitStatus && 
         <form onSubmit={getRSVPDetails}>
+          {showDuck && <><div className="overlay-image">
+          <img
+            src="https://media.tenor.com/yRSnf6wABQ4AAAAi/pato-duck.gif"
+            alt="Duck Overlay"
+            ></img></div></>}
         {FormValues.map((field) => (
         <div key={field["fieldname"]}> 
             {/* Dynamic generation of form fields and input depending on 
@@ -88,7 +94,7 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode}) =>{
         </div>))}
         <br/><br/>
         <button type="submit" className="btn" onClick={getRSVPDetails}>RSVP</button>
-        <br/><br/>
+        <br/><br/> <br/><br/> <br/><br/>
         </form>}
         </div>);
     
