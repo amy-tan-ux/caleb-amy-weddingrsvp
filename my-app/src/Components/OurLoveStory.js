@@ -22,6 +22,8 @@ const OurLoveStory = () => {
             It's been 8 years and our love for each other has only grown stronger and stronger!
             <br/><br/>
             We knew we wanted to spend the rest of our lives together for a while now as we got engaged in June of 2022. That's why we're so excited to finally invite you to join us in celebrating the beginning of a new chapter in our lives: Married!
+            <br/><br/>
+            
             </couple-quote>
 
             </div>
@@ -43,6 +45,7 @@ const OurLoveStory = () => {
             two-body problem</a>, we've been making it work and somehow we've been able to be physically together during our major milestones and achievements. 
             It's taken a lot of trips to the airport and support from friends and family.
             We know we're lucky and blessed, and we are extremely thankful to eveyone who helped make our journey easier.
+            <br/>
             </couple-quote>
             <gallery-photo-3>
             </gallery-photo-3> 

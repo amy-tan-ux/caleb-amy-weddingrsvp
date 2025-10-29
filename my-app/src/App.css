@@ -419,6 +419,7 @@ couple-quote a {
 
 .left-container{
     width: 100%;
+    height: auto;
     display: block;
     float: none;
 
@@ -426,11 +427,22 @@ couple-quote a {
 
 .right-container{
     width: 100%;
+    height: auto;
     display: block;
   }
 
+couple-quote{
+  width: 94%;
+  height: auto;
+  padding: 3%;
+ }
+
 footer{
  padding-top: 30vh;
+}
+.music-message-section{
+  height: auto;
+  padding-bottom: 200px;
 }
   
 }
