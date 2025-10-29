@@ -9,19 +9,19 @@ const EventsDetailsPage = () => {
         <div>
           <section class="icon-section">
           <a href="#details" class="icon-link">
-            <img src="" alt="RSVP Details" />
+            <img src="details-icon.png" alt="RSVP Details" />
           </a>
           <div class="icon-link">
-            <img src="" alt="Dress Code" />
+            <img src="story-icon.png" alt="Dress Code" />
           </div>
           <div class="icon-link">
-            <img src="" alt="Colour Scheme" />
+            <img src="rsvp-icon.png" alt="Colour Scheme" />
           </div>
-          <a href="#music-message" class="icon-link">
-            <img src="" alt="Song Request" />
+        <a href="#details" class="icon-link optional">
+            <img src="details-icon.png" alt="RSVP Details" />
           </a>
-          <a href="#music-message" class="icon-link">
-            <img src="" alt="Message to Couple" />
+          <a href="#details" class="icon-link optional">
+            <img src="details-icon.png" alt="RSVP Details" />
           </a>
         </section>
         </div>

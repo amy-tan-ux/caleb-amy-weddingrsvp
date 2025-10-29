@@ -81,6 +81,11 @@
     position: relative;
   }
   
+  .overlay-image{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
   .icon-btn {
     position: absolute;
     right: 10px;

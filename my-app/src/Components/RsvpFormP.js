@@ -37,10 +37,7 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode, RelatedGuestNa
 
     return (
     <div className="form-container" id="rsvp">
-         {showDuck && <img
-            src="https://media.tenor.com/yRSnf6wABQ4AAAAi/pato-duck.gif"
-            alt="Duck Overlay"
-            className="overlay-image"></img>}
+         
         <div className='section-header'>RSVP Details & Form</div>
         <br/>
         {RelatedGuestName && <>  
@@ -56,6 +53,11 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode, RelatedGuestNa
         <br/>
         { !formSubmitStatus && 
         <form onSubmit={getRSVPDetails}>
+          {showDuck && <><div className="overlay-image">
+          <img
+            src="https://media.tenor.com/yRSnf6wABQ4AAAAi/pato-duck.gif"
+            alt="Duck Overlay"
+            ></img></div></>}
         {FormValues.map((field) => (
         <div key={field["fieldname"]}> 
             {/* Dynamic generation of form fields and input depending on 

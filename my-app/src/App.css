@@ -226,6 +226,14 @@ html {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+.input-box-side{
+  padding: 10px;
+  width: 30%;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 .btn {
   background-color: var(--main-dark-blue); /* Rose gold */
@@ -279,6 +287,7 @@ loveStorySec-2{
   width: 100%;
   height: auto;
   display: block;
+  background-color: var(--main-dark-blue);
 }
 loveStorySec-3{
     background-image: url('../public/LoveStory5.jpg');
@@ -404,7 +413,7 @@ couple-quote a {
   color: var(--main-dark-red);
 }
 
-.icon-form{
+.optional{
     display: none;
   }
 

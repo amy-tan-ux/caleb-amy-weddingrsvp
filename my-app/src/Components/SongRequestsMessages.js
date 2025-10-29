@@ -80,7 +80,6 @@ const SongRequestsMessages = ({userCode = "open", userName = "anonymous", pastSu
           {( !userName || userName==="anonymous" || userName==="Please Enter Your Guest Code") && <>We kindly ask you to share your name so we know who you are!<br/> <br/>
           <input type="text" placeholder="Enter Your Name" className="input-box-side"  onChange={(e) => setGuestName(e.target.value)}/> <br />
           </> }
-          <br/>
 
           {/* Song Request Input with Send Button */}
           <div className="input-container">
