@@ -175,7 +175,7 @@ function App() {
             className="input-box"
           />
         </form>
-      )}
+      )}<br/>
       </div>
       </div>
       <div>
