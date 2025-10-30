@@ -40,15 +40,16 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode, RelatedGuestNa
          
         <div className='section-header'>RSVP Details & Form</div>
         <br/>
-        {RelatedGuestName && <>  
-            <a href={`${window.location.origin}/caleb-amy-weddingrsvp/?guestCode=${RelatedGuestCode}`} target="_blank" rel="noopener noreferrer">
-            RSVP for {RelatedGuestName}
-            </a></>}
-        <br/><br/>
         <h3>Dear {GuestName}, </h3>
         {formSubmitStatus && <h4>Thank you for submitting your response, you can always reload the page to make any changes to response anytime before January 31, 2026.</h4>}
         {!formSubmitStatus && RsvpStatus && <h4>You've already submitted a response but if there are any changes you would like to make, you can submit another one before January 31, 2026.</h4>}
         {!formSubmitStatus && !RsvpStatus && <h4>Please RSVP below. We kindly ask you to complete the form by January 31, 2026. </h4>}
+        {RelatedGuestName && <>  
+            <h4> You can also RSVP for {RelatedGuestName} here: </h4>
+            <a href={`${window.location.origin}/caleb-amy-weddingrsvp/?guestCode=${RelatedGuestCode}`} target="_blank" rel="noopener noreferrer">
+            RSVP for {RelatedGuestName}
+            </a>
+            <br/><br/></>}
         {submitErrorMessage && <p style={{color: "red"}}>Failed to Submit Your Response. Please Try Again Later.</p>}
         <br/>
         { !formSubmitStatus && 
@@ -94,8 +95,9 @@ const RsvpFormP = ({FormValues, GuestName, RsvpStatus, GuestCode, RelatedGuestNa
         </div>))}
         <br/><br/>
         <button type="submit" className="btn" onClick={getRSVPDetails}>RSVP</button>
-        <br/><br/> <br/><br/> <br/><br/>
+        <br/>
         </form>}
+        <br/> <br/><br/> <br/><br/>
         </div>);
     
 };
