@@ -42,7 +42,7 @@
 
   iframe{
     width: 65%;
-    height: 50vh;
+    height: max(50vh, 400px);
     border: none;
   } 
 
@@ -72,7 +72,7 @@
 
     iframe{
     width: 55vw;
-    height: 30vh;
+    height: max(30vh, 300px);
     border: none;
   } 
     .form-container {
