@@ -18,7 +18,6 @@ export const callGoogleScriptsService = async (httptype, guestCode, action, payl
     const guestDetailsUrl = process.env.REACT_APP_GOOGLE_SHEETS_WEBAPP;  
     console.log(guestDetailsUrl);
     const urlExtension = `?guestCode=${guestCode}&actions=${action}`;
-    debugger
     if (httptype === "POST"){
             try {
                 let googleScriptResponse;

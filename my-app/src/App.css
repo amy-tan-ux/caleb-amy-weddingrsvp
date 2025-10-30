@@ -431,6 +431,11 @@ couple-quote a {
     display: block;
   }
 
+  gallery-photo-3{
+    display: none;
+
+}
+
 couple-quote{
   width: 94%;
   height: auto;

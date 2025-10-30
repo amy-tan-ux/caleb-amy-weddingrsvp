@@ -7,26 +7,6 @@ const OurLoveStory = () => {
             <div className='section-header'> Our Love Story</div>
           </loveStorySec-1>
           <loveStorySec-2>
-            <div className="left-container">
-            <gallery-photo-1>
-            </gallery-photo-1>
-            <couple-quote>
-            <br/><br/>
-            The challenges we've faced has built communication, prioritization, and synergy into our relationship. 
-            Every obstacle we've encountered has been a test on our values, compatibility, loyalty, and patience.
-            We've grown so much closer with each other and our families became one. 
-            We've learned how to make the most out of our situation and accept what the world has to offer.
-            Most importantly, we've learned how to love and appreciate every day as it comes.
-            <br/><br/>
-            We rushed in quickly, however people often mistake us for a "fresh new couple" still in our "honeymoon phase". 
-            It's been 8 years and our love for each other has only grown stronger and stronger!
-            <br/><br/>
-            We knew we wanted to spend the rest of our lives together for a while now as we got engaged in June of 2022. That's why we're so excited to finally invite you to join us in celebrating the beginning of a new chapter in our lives: Married!
-            <br/><br/>
-            
-            </couple-quote>
-
-            </div>
             <div className="right-container">
             <gallery-photo-2>
             </gallery-photo-2>
@@ -49,7 +29,27 @@ const OurLoveStory = () => {
             </couple-quote>
             <gallery-photo-3>
             </gallery-photo-3> 
-            </div>           
+            </div> 
+            <div className="left-container">
+            <gallery-photo-1>
+            </gallery-photo-1>
+            <couple-quote>
+            <br/><br/>
+            The challenges we've faced has built communication, prioritization, and synergy into our relationship. 
+            Every obstacle we've encountered has been a test on our values, compatibility, loyalty, and patience.
+            We've grown so much closer with each other and our families became one. 
+            We've learned how to make the most out of our situation and accept what the world has to offer.
+            Most importantly, we've learned how to love and appreciate every day as it comes.
+            <br/><br/>
+            We rushed in quickly, however people often mistake us for a "fresh new couple" still in our "honeymoon phase". 
+            It's been 8 years and our love for each other has only grown stronger and stronger!
+            <br/><br/>
+            We knew we wanted to spend the rest of our lives together for a while now as we got engaged in June of 2022. That's why we're so excited to finally invite you to join us in celebrating the beginning of a new chapter in our lives: Married!
+            <br/><br/>
+            
+            </couple-quote>
+
+            </div>          
           </loveStorySec-2>
 
           <loveStorySec-3>
