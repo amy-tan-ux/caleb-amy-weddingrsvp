@@ -320,7 +320,7 @@ gallery-photo-1{
     background-image: url('../public/LoveStory2.jpg');
     background-size: cover;
     background-position: center;
-    height: max(120vh, 950px);
+    height: max(145vh, 950px);
     width: 100%;
     display: flex;
 
@@ -353,7 +353,7 @@ gallery-photo-3{
     background-image: url('../public/LoveStory4.jpg');
     background-size: cover;
     background-position: center;
-    height: max(60vh, 500px);
+    height: max(90vh, 500px);
     width: 100%;
 
 }
