@@ -24,6 +24,16 @@ html {
   scroll-behavior: smooth;
 }
 
+photo-creds{
+  position: absolute;
+  bottom: 4vh;
+  right: 3vw;
+}
+
+photo-creds a{
+  color: var(--main-light-grey);
+}
+
 .left-container{
       width: 50%;
       height: auto;
@@ -458,6 +468,9 @@ footer{
 
 @media screen and  (max-width: 560px) {
   .navbar {
+    display: none;
+  }
+  photo-creds{
     display: none;
   }
 }
