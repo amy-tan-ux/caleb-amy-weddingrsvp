@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/caleb-amy-weddingrsvp/static/css/main.27de0f1d.css",
+    "main.css": "/caleb-amy-weddingrsvp/static/css/main.b28e56be.css",
     "main.js": "/caleb-amy-weddingrsvp/static/js/main.02e805e3.js",
     "static/js/453.ed3810f9.chunk.js": "/caleb-amy-weddingrsvp/static/js/453.ed3810f9.chunk.js",
     "static/media/floral_background.png": "/caleb-amy-weddingrsvp/static/media/floral_background.b1c8adc39c3a608cc7ec.png",
@@ -13,12 +13,12 @@
     "static/media/AmyCalebHero.jpg": "/caleb-amy-weddingrsvp/static/media/AmyCalebHero.99abb3918286dd1ce07c.jpg",
     "static/media/LoveStory5.jpg": "/caleb-amy-weddingrsvp/static/media/LoveStory5.371b2b446de89a85f76f.jpg",
     "index.html": "/caleb-amy-weddingrsvp/index.html",
-    "main.27de0f1d.css.map": "/caleb-amy-weddingrsvp/static/css/main.27de0f1d.css.map",
+    "main.b28e56be.css.map": "/caleb-amy-weddingrsvp/static/css/main.b28e56be.css.map",
     "main.02e805e3.js.map": "/caleb-amy-weddingrsvp/static/js/main.02e805e3.js.map",
     "453.ed3810f9.chunk.js.map": "/caleb-amy-weddingrsvp/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.27de0f1d.css",
+    "static/css/main.b28e56be.css",
     "static/js/main.02e805e3.js"
   ]
 }
