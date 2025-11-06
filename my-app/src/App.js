@@ -187,7 +187,7 @@ function App() {
         { !isInitLoading &&
         (
         <>
-        {/* <EventsDetailsPage></EventsDetailsPage> */}
+        <EventsDetailsPage></EventsDetailsPage>
         {/* Guest Code Form View */}
         {authenticationStatus && (
           <>

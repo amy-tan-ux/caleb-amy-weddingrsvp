@@ -87,34 +87,6 @@ photo-creds a{
   color: var(--main-dark-red);
 }
 
-.icon-section {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 2rem;
-  background-color: #fdfdfd;
-  border-top: 1px solid #eee;
-}
-
-.icon-link img,
-.icon-form button img {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s ease;
-}
-
-.icon-link:hover img,
-.icon-form button:hover img {
-  transform: scale(1.1);
-}
-
-.icon-form button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
 .parallax {
   height: auto;
   min-height: 100vh;
@@ -425,10 +397,6 @@ couple-quote a {
 .hero input::placeholder {
   color: var(--main-dark-red);
 }
-
-.optional{
-    display: none;
-  }
 
 .left-container{
     width: 100%;
