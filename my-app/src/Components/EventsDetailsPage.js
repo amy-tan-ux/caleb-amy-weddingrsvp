@@ -27,7 +27,7 @@ const EventsDetailsPage = () => {
           <gift-section class="icon-link">
             <h3>Gifts & Registry</h3>
            <div className="giftlink"></div>
-            <p>Your presence and attendance is already appreciated but if you do wish to give us something we will accept a <a href="https://en.wikipedia.org/wiki/Red_envelope">lucky red pocket</a> as a symbol of good luck in our Chinese culture!</p>
+            <p>Your presence and attendance is already appreciated but if you do wish to give us something we will accept a <a href="https://en.wikipedia.org/wiki/Red_envelope">lucky red packet</a> as a symbol of blessing and good luck in our Chinese culture!</p>
           </gift-section>
           <song-request-section class="icon-link optional">
             <h3>Song Requests</h3>
